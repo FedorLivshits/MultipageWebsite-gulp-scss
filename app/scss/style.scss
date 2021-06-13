@@ -238,7 +238,8 @@
     position: relative;
     margin-bottom: 17px;
     padding-bottom: 18px;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
