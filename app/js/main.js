@@ -11,6 +11,13 @@ window.addEventListener('load', () => {
             rightSideMenu.classList.add('rightside-menu--close');
         })
     }
-
     rightSideMenu()
+})
+
+//jquery slick-slider
+$(function() {
+    $('.top__slider').slick({
+        dots: true,
+        arrows: false,
+    });
 })
