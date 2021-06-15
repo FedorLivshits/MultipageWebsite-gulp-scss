@@ -417,19 +417,21 @@
   }
 }
 
-.decore{
-  &__wrapper{
+.decore {
+  &__wrapper {
     background-image: url(../img/decore-section-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 600px;
     margin-bottom: 80px;
   }
-  &__info{
+
+  &__info {
     padding-top: 172px;
     padding-bottom: 156px;
   }
-  &__title{
+
+  &__title {
     color: $title;
     @extend %title-font;
     font-size: 60px;
@@ -449,7 +451,100 @@
       background: #6D7278
     }
   }
-  &__text{
+
+  &__text {
     width: 540px;
+  }
+}
+
+.works-path {
+ margin-bottom: 108px;
+  &__title {
+    text-align: center;
+    @extend %title-font;
+    color: $title;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 39px;
+  }
+
+  &__items-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 268px;
+  }
+
+  &__item-title-box {
+    display: flex;
+    margin-bottom: 23px;
+  }
+
+  &__item-title {
+    margin-left: 13px;
+    color: $title;
+    @extend %title-font;
+  }
+
+  &__item-title {
+    margin-top: 13px;
+  }
+
+  &__item--production {
+    margin-left: 357px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 2px;
+      background: rgba($title, .7);
+      bottom: -41px;
+    }
+  }
+  &__item--measurments{
+    margin-right: 303px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 2px;
+      background: rgba($title, .7);
+      top: -41px;
+    }
+  }
+  &__items-box--end {
+    justify-content: flex-end;
+  }
+
+  &__line {
+    height: 2px;
+    max-width: 1110px;
+    background: rgba($title, .7);
+    margin: 40px 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background: $title;
+      border-radius: 50%;
+      top: -4px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background: $title;
+      border-radius: 50%;
+      top: -4px;
+      right: 0;
+    }
   }
 }
