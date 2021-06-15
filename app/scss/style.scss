@@ -319,14 +319,16 @@
   }
 }
 
-.new-collection{
+.new-collection {
   padding: 45px 0 105px;
-  &__info{
+
+  &__info {
     max-width: 730px;
     margin: 0 auto;
     text-align: center;
   }
-  &__title{
+
+  &__title {
     color: $title;
     font-size: 36px;
     line-height: 51px;
@@ -334,7 +336,8 @@
     padding-bottom: 25px;
     margin-bottom: 25px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       height: 1px;
@@ -346,22 +349,27 @@
       margin: 0 auto;
     }
   }
-  &__text{
+
+  &__text {
     margin-bottom: 27px;
   }
 }
-.collection{
+
+.collection {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
-  &__item{
+
+  &__item {
     position: relative;
   }
-  &__img{
+
+  &__img {
     min-height: 350px;
     object-fit: cover;
   }
-  &__info{
+
+  &__info {
     position: absolute;
     top: 0;
     left: 0;
@@ -369,17 +377,19 @@
     right: 0;
     background-color: rgba(#fff, .7);
     padding: 10px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    &:hover{
+
+    &:hover {
       opacity: 1;
-      transition:all .5s;
+      transition: all .5s;
     }
   }
-  &__info-title{
+
+  &__info-title {
     color: $title;
     @extend %title-font;
     font-size: 20px;
@@ -387,7 +397,8 @@
     padding-bottom: 19px;
     margin-bottom: 19px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       height: 1px;
@@ -399,8 +410,46 @@
       background: #6D7278
     }
   }
-  &__info-text{
+
+  &__info-text {
     color: #707070;
     font-weight: 600;
+  }
+}
+
+.decore{
+  &__wrapper{
+    background-image: url(../img/decore-section-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin-bottom: 80px;
+  }
+  &__info{
+    padding-top: 172px;
+    padding-bottom: 156px;
+  }
+  &__title{
+    color: $title;
+    @extend %title-font;
+    font-size: 60px;
+    line-height: 80px;
+    width: 499px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 200px;
+      bottom: 0;
+      left: 0;
+      background: #6D7278
+    }
+  }
+  &__text{
+    width: 540px;
   }
 }
