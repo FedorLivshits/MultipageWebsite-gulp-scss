@@ -11,15 +11,22 @@ window.addEventListener('load', () => {
             rightSideMenu.classList.add('rightside-menu--close');
         })
     }
-    rightSideMenu()
-})
 
-//jquery slick-slider
-$(function() {
+    rightSideMenu()
+
+    //jquery slick-slider
     $('.top__slider').slick({
         dots: true,
         arrows: false,
         fade: true,
         autoPlay: true
     });
+
+    //mixitUp plugin for gallery
+    const mixer = mixitup('.gallery__inner', {
+        load: {
+            filter: '.living'
+        }
+    });
 })
+
