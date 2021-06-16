@@ -458,7 +458,8 @@
 }
 
 .works-path {
- margin-bottom: 108px;
+  margin-bottom: 108px;
+
   &__title {
     text-align: center;
     @extend %title-font;
@@ -495,7 +496,8 @@
   &__item--production {
     margin-left: 357px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       height: 20px;
@@ -504,10 +506,12 @@
       bottom: -41px;
     }
   }
-  &__item--measurments{
+
+  &__item--measurments {
     margin-right: 303px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       height: 20px;
@@ -516,6 +520,7 @@
       top: -41px;
     }
   }
+
   &__items-box--end {
     justify-content: flex-end;
   }
@@ -536,6 +541,7 @@
       border-radius: 50%;
       top: -4px;
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -546,5 +552,37 @@
       top: -4px;
       right: 0;
     }
+  }
+}
+
+.gallery {
+  padding: 80px 0 90px;
+
+  &__btns {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    margin: 0 13px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: #8F8D8D;
+    background: transparent;
+    border-radius: 21px;
+    padding: 6px 16px;
+    border: 1px solid rgba(#454647, .5);
+    cursor: pointer;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  &__item-img:nth-child(1){
+    grid-column: span 2;
   }
 }
