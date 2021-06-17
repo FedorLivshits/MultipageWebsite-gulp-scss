@@ -503,7 +503,7 @@
       height: 20px;
       width: 2px;
       background: rgba($title, .7);
-      bottom: -41px;
+      bottom: -40px;
     }
   }
 
@@ -517,7 +517,7 @@
       height: 20px;
       width: 2px;
       background: rgba($title, .7);
-      top: -41px;
+      top: -40px;
     }
   }
 
@@ -578,7 +578,8 @@
 
   .mixitup-control-active {
     background: rgba(#FFEF35, .5);
-    border: 1px solid rgba(#FFEF35, .5);
+    padding: 7px 17px;
+    border: none;
     color: $title;
   }
 
@@ -599,5 +600,57 @@
   &__item-img:nth-child(1) {
     grid-column: span 2;
     grid-row: span 2
+  }
+}
+
+.blog-box {
+  padding-bottom: 100px;
+
+  &__title {
+    @extend %title-font;
+    font-size: 36px;
+    line-height: 51px;
+    color: $title;
+    margin: 0 auto 30px;
+    text-align: center;
+    max-width: 430px;
+  }
+
+  &__items {
+    //display: flex;
+    //justify-content: space-between;
+    //flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    //max-width: 540px;
+  }
+
+  &__item-img {
+    margin-bottom: 20px;
+    //height: 307px;
+  }
+
+  &__item-links {
+    color: #707070;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 7px;
+  }
+
+  &__author,
+  &__theme {
+    color: #707070;
+  }
+
+  &__item-title {
+    @extend %title-font;
+    color: $title;
+    font-size: 24px;
+    line-height: 38px;
   }
 }
