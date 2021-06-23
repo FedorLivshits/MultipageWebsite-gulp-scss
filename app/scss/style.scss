@@ -657,21 +657,13 @@
   }
 
   &__items {
-    //display: flex;
-    //justify-content: space-between;
-    //flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
   }
 
-  &__item {
-    //max-width: 540px;
-  }
-
   &__item-img {
     margin-bottom: 20px;
-    //height: 307px;
   }
 
   &__item-links {
@@ -685,6 +677,11 @@
   &__author,
   &__theme {
     color: #707070;
+  }
+
+  &__author:hover,
+  &__theme:hover {
+    color: $title;
   }
 
   &__item-title {
@@ -715,6 +712,7 @@
 
   &__content {
     padding: 130px 0 40px;
+    margin-bottom: 60px;
   }
 
   &__content-title {
@@ -757,6 +755,83 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.inspiration {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../img/inspiration-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 362px;
+    z-index: -1;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 78px;
+    margin-left: -230px;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: $title;
+    line-height: 60px;
+    @extend %title-font;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 200px;
+      background: #6D7278;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    max-width: 825px;
+  }
+
+  &__item {
+    margin-bottom: 33px;
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: space-between;
+    @extend %title-font;
+    line-height: 23px;
+    color: $title;
+    padding-bottom: 14px;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 4px;
+  }
+  &__line{
+    height: 2px;
+    background: $title;
+    border-radius: 4px;
+    margin-top: -2px;
   }
 }
 
