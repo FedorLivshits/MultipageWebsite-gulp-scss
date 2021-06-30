@@ -22,6 +22,13 @@ window.addEventListener('load', () => {
         autoPlay: true
     });
 
+    $('.contacts-slider').slick({
+        slidesToShow: 10,
+        slidesToScroll: 10,
+        dots: true,
+        arrows: false,
+    });
+
     //mixitUp plugin for gallery
     const mixer = mixitup('.gallery__inner', {
         load: {
