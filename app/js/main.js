@@ -3,12 +3,15 @@ window.addEventListener('load', () => {
         const headerBtn = document.querySelector('.header__btn');
         const rightSideCloseBtn = document.querySelector('.rightside-menu__close');
         const rightSideMenu = document.querySelector('.rightside-menu');
+        const body = document.querySelector('body');
 
         headerBtn.addEventListener('click', () => {
             rightSideMenu.classList.remove('rightside-menu--close');
+            body.classList.add('body--hidden');
         })
         rightSideCloseBtn.addEventListener('click', () => {
             rightSideMenu.classList.add('rightside-menu--close');
+            body.classList.remove('body--hidden');
         })
     }
 
