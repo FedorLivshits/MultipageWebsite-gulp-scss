@@ -1,3 +1,8 @@
+@media (max-width: 1000px) {
+	.footer__info {
+		width: 430px;
+	}
+}
 @media (max-width: 870px) {
 	.header__btn {
 		display: none;
@@ -13,6 +18,33 @@
 	}
 	.logo {
 		margin: 0;
+	}
+	.footer__info {
+		width: 350px;
+	}
+}
+
+@media (max-width: 780px) {
+	.footer {
+		&__inner {
+			flex-wrap: wrap;
+            justify-content: center;
+		}
+        &__info{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        &__info-text{
+            max-width: 100%;
+        }
+        &__social{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__menu{
+            margin-left: auto;
+            margin-right: auto;
+        }
 	}
 }
 
@@ -92,4 +124,23 @@
 			}
 		}
 	}
+}
+
+@media (max-width: 400px) {
+    .footer{
+        &__inner{
+            justify-content: space-between;
+        }
+        &__social{
+            margin-left: 0;
+        }
+        &__form{
+            display: block;
+            &-button{
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
 }
