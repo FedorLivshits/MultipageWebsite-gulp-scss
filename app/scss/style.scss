@@ -1264,3 +1264,23 @@
 		padding-bottom: 0;
 	}
 }
+
+.tags{
+    &__title{
+        font-size: 20px;
+        line-height: 31px;
+        color: $title;
+    }
+    &__links{
+        padding-bottom: 30px;
+    }
+    &__link{
+        margin-top: 15px;
+        display: inline-block;
+        margin-right: 23px;
+        color: #8F8D8D;
+        border: 1px solid #8F8D8D;
+        border-radius: 30px;
+        padding: 0 16px;
+    }
+}
