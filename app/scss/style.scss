@@ -18,6 +18,9 @@
 		padding: 0;
 		cursor: pointer;
 	}
+    &__btn-menu{
+        display: none;
+    }
 }
 
 .logo {
@@ -1400,3 +1403,5 @@
 		cursor: pointer;
 	}
 }
+
+@import 'media';
