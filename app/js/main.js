@@ -26,10 +26,11 @@ window.addEventListener('load', () => {
             body.classList.remove('body--hidden')
         })
     }
+
     rightSideMenu()
 
     // for items in work-path section in index.html
-    if($(window).width() < 710){
+    if ($(window).width() < 710) {
         $('.works-path__line').remove()
         $('.works-path__item--measurments').appendTo($('.works-path__items-box'))
         $('.works-path__item--delivery').appendTo($('.works-path__items-box'))
@@ -49,6 +50,33 @@ window.addEventListener('load', () => {
         slidesToScroll: 10,
         dots: true,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 8,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                }
+            },
+        ]
     })
 
     //mixitUp plugin for gallery
@@ -56,5 +84,5 @@ window.addEventListener('load', () => {
         load: {
             filter: '.living'
         }
-    });
+    })
 })
