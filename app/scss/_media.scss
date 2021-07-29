@@ -156,6 +156,12 @@
       margin-right: 34px;
     }
   }
+  .blog-box__items {
+    grid-template-columns: 1fr;
+  }
+  .blog-box__item-img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 710px) {
@@ -357,7 +363,21 @@
       padding: 5px 12px;
     }
   }
+  .works-path__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .blog-box {
+    &__title {
+      font-size: 30px;
+      line-height: 42px;
+    }
 
+    &__item-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
