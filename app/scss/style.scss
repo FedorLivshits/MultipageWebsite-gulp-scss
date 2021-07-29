@@ -857,7 +857,8 @@
 .map {
   margin-top: -53px;
   margin-bottom: 50px;
-  iframe{
+
+  iframe {
     height: 578px;
   }
 }
@@ -1386,6 +1387,8 @@
 
   &__message-avatar {
     margin-right: 13px;
+    position: relative;
+    top: -5px;
   }
 
   &__message-head {
