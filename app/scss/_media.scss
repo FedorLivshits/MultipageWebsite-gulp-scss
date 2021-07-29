@@ -16,7 +16,7 @@
       width: 100%;
     }
   }
-  .gallery-page{
+  .gallery-page {
     padding-top: 40px;
   }
 }
@@ -157,11 +157,48 @@
       margin-right: 34px;
     }
   }
-  .blog-box__items {
-    grid-template-columns: 1fr;
+  .blog-box {
+    &_items {
+      grid-template-columns: 1fr;
+    }
+
+    &__item-img {
+      width: 100%;
+    }
   }
-  .blog-box__item-img {
-    width: 100%;
+
+  .about {
+    &__prev-title {
+      padding: 110px 0;
+      font-size: 40px;
+    }
+
+    &__content {
+      padding: 40px 0 20px;
+    }
+
+    &__content-title {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    &__content-text {
+      padding-left: 0;
+    }
+  }
+
+  .inspiration {
+    &__img {
+      display: none;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .about__popup {
+    padding: 50px 0;
   }
 }
 
@@ -376,6 +413,9 @@
       font-size: 20px;
       line-height: 32px;
     }
+  }
+  .partners__items {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
