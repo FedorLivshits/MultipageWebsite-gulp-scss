@@ -184,8 +184,8 @@
     }
 
     &__items-box {
-      display: block;
-      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
     }
 
     &__item {
@@ -193,20 +193,27 @@
       margin-bottom: 30px;
     }
 
-    &__item--production {
-      margin: 0;
+    &__item--measurments {
+      order: 2;
+      margin-right: 0;
 
       &::before {
         display: none;
       }
     }
 
-    &__item--measurments {
-      margin-right: 0;
+    &__item--production {
+      order: 3;
+      margin-left: 0;
+      margin-bottom: 30px;
 
       &::before {
         display: none;
       }
+    }
+
+    &__item--delivery {
+      order: 4
     }
   }
 

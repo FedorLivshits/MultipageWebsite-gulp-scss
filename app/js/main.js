@@ -29,43 +29,12 @@ window.addEventListener('load', () => {
     rightSideMenu()
 
     // for items in work-path section in index.html
-    function worksItemsReverse() {
-        const productionItem = document.querySelector('.works-path__item--production')
-        const measItem = document.querySelector('.works-path__item--measurments')
-
-        const measInner = `<div class="works-path__item-title-box">
-            <img class="works-path__item-img" src="img/works-img-3.png" alt="">
-            <h6 class="works-path__item-title">
-            Measurements
-            </h6>
-            </div>
-            <p class="works-path__item-text">
-            Intelligentsia YOLO lomo bushwick coloring book. Semiotics man bun venmo viral cliche
-        </p>`
-
-        const prodInner = `<div class="works-path__item-title-box">
-                                <img class="works-path__item-img" src="img/works-img-2.png" alt="">
-                                <h6 class="works-path__item-title">
-                                    Production
-                                </h6>
-                            </div>
-                            <p class="works-path__item-text">
-                                Everyday carry actually neutra authentic kogi shabby chic
-                            </p>`
-
-            if (window.innerWidth < '710') {
-                productionItem.innerHTML = ''
-                productionItem.innerHTML = measInner
-                measItem.innerHTML = ''
-                measItem.innerHTML = prodInner
-            } else {
-                productionItem.innerHTML = ''
-                productionItem.innerHTML = prodInner
-                measItem.innerHTML = ''
-                measItem.innerHTML = measInner
-            }
+    if($(window).width() < 710){
+        $('.works-path__line').remove()
+        $('.works-path__item--measurments').appendTo($('.works-path__items-box'))
+        $('.works-path__item--delivery').appendTo($('.works-path__items-box'))
+        $('.works-path__items-box--end').remove()
     }
-    worksItemsReverse()
 
     //jquery slick-slider
     $('.top__slider').slick({
@@ -85,7 +54,7 @@ window.addEventListener('load', () => {
     //mixitUp plugin for gallery
     const mixer = mixitup('.gallery__inner', {
         load: {
-            filter: '.living',
-        },
-    })
+            filter: '.living'
+        }
+    });
 })
